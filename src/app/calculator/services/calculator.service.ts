@@ -19,13 +19,13 @@ export class CalculatorService {
     console.log({value});
 
     if (![...numbers, ...operators,...specialOperators].includes(value)) {
-      return
+      return;
     }
 
     // =
     if (value === '=') {
       this.calculateResult();
-      return
+      return;
     }
 
     if ( value === 'C'){
@@ -62,8 +62,9 @@ export class CalculatorService {
     }
 
     // Limitar numero de caracteres
-    if (this.resultText().length > 10) {
+    if (this.resultText().length >= 10) {
       console.log('max length reached');
+      return;
     }
 
     // Validar punto decimal
