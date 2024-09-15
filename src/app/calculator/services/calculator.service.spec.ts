@@ -136,7 +136,6 @@ describe('CalculatorService', () => {
     for (let i = 0; i < 10; i++) {
       service.constructNumber('1');
     }
-    console.log(service.resultText());
     expect(service.resultText().length).toBe(10);
 
     service.constructNumber('1');

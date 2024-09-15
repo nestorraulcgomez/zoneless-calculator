@@ -16,8 +16,6 @@ export class CalculatorService {
 
   public constructNumber( value: string){
     // Validar input
-    console.log({value});
-
     if (![...numbers, ...operators,...specialOperators].includes(value)) {
       return;
     }
